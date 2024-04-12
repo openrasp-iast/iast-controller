@@ -1,0 +1,112 @@
+{
+  "@timestamp": 1703085981885,
+  "app_id": "6d840599574857907a6ca548b3a95621410c8159",
+  "attack_count": 1,
+  "attack_location": {
+    "latitude": 0,
+    "location_en": "-",
+    "location_zh_cn": "-",
+    "longitude": 0
+  },
+  "attack_params": {
+    "command": "'\"openrasp' cmd",
+    "env": [],
+    "hook_type": "command",
+    "stack": [
+      "java.lang.ProcessImpl.<init>",
+      "java.lang.ProcessImpl.start",
+      "java.lang.ProcessBuilder.start",
+      "java.lang.ProcessBuilder.start",
+      "java.lang.Runtime.exec",
+      "java.lang.Runtime.exec",
+      "java.lang.Runtime.exec",
+      "org.apache.jsp._004_002dcommand_002d1_jsp._jspService",
+      "org.apache.jasper.runtime.HttpJspBase.service",
+      "javax.servlet.http.HttpServlet.service",
+      "org.apache.jasper.servlet.JspServletWrapper.service",
+      "org.apache.jasper.servlet.JspServlet.serviceJspFile",
+      "org.apache.jasper.servlet.JspServlet.service",
+      "javax.servlet.http.HttpServlet.service",
+      "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter",
+      "org.apache.catalina.core.ApplicationFilterChain.doFilter",
+      "org.apache.tomcat.websocket.server.WsFilter.doFilter",
+      "org.apache.catalina.core.ApplicationFilterChain.internalDoFilter",
+      "org.apache.catalina.core.ApplicationFilterChain.doFilter",
+      "org.apache.catalina.core.StandardWrapperValve.invoke",
+      "org.apache.catalina.core.StandardContextValve.invoke",
+      "org.apache.catalina.authenticator.AuthenticatorBase.invoke",
+      "org.apache.catalina.core.StandardHostValve.invoke",
+      "org.apache.catalina.valves.ErrorReportValve.invoke",
+      "org.apache.catalina.valves.AbstractAccessLogValve.invoke",
+      "org.apache.catalina.core.StandardEngineValve.invoke",
+      "org.apache.catalina.connector.CoyoteAdapter.service",
+      "org.apache.coyote.http11.Http11Processor.service",
+      "org.apache.coyote.AbstractProcessorLight.process",
+      "org.apache.coyote.AbstractProtocol$ConnectionHandler.process",
+      "org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun",
+      "org.apache.tomcat.util.net.SocketProcessorBase.run",
+      "org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker",
+      "org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run",
+      "org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run",
+      "java.lang.Thread.run"
+    ],
+    "tokens": [
+      {
+        "start": 0,
+        "stop": 11,
+        "text": "'\"openrasp'"
+      },
+      {
+        "start": 12,
+        "stop": 15,
+        "text": "cmd"
+      }
+    ]
+  },
+  "attack_source": "192.168.198.138",
+  "attack_type": "command",
+  "body": "HTTP Request:\nGET /vulns/004-command-1.jsp?cmd=%27%22openrasp%27+cmd HTTP/1.1\r\nreferer: http://192.168.198.137:8080/vulns/004-command-1.jsp\r\naccept-language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6\r\nhost: 192.168.198.137:8080\r\nupgrade-insecure-requests: 1\r\nconnection: keep-alive\r\naccept-encoding: gzip, deflate\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0\r\naccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nx-iast-filter: W3sidHlwZSI6ICJjb21tYW5kIiwgImZpbHRlciI6IHsiY21kIjogIidcIm9wZW5yYXNwJyBjbWQifX1d\r\nscan-request-id: 0-8ced6b47-bc77-4190-95de-47cbbc2cb1f5\r\nCookie: JSESSIONID=351831C134C4A8B8A1CF0C31B62A463C;\r\n\r\n\n\n\nHTTP Response:\nHTTP Code:200\r\nX-Request-ID: 51c74351692d4493b68c153c4c7dd25b\r\nX-Protected-By: OpenRASP\r\nContent-Type: text/html;charset=UTF-8\r\nContent-Length: 3945\r\nDate: Wed, 20 Dec 2023 15:26:20 GMT\r\nKeep-Alive: timeout=20\r\nConnection: keep-alive\r\n\r\njava.io.IOException: Cannot run program \"'\"openrasp'\": error=2, No such file or directory\n\tat java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1128)\n\tat java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1071)\n\tat java.base/java.lang.Runtime.exec(Runtime.java:592)\n\tat java.base/java.lang.Runtime.exec(Runtime.java:416)\n\tat java.base/java.lang.Runtime.exec(Runtime.java:313)\n\tat org.apache.jsp._004_002dcommand_002d1_jsp._jspService(_004_002dcommand_002d1_jsp.java:136)\n\tat org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:623)\n\tat org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:466)\n\tat org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:379)\n\tat org.apache.jasper.servlet.JspServlet.service(JspServlet.java:327)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:623)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\n\tat org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:670)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:928)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1794)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\n\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.base/java.lang.Thread.run(Thread.java:829)\nCaused by: java.io.IOException: error=2, No such file or directory\n\tat java.base/java.lang.ProcessImpl.forkAndExec(Native Method)\n\tat java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:340)\n\tat java.base/java.lang.ProcessImpl.start(ProcessImpl.java:271)\n\tat java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1107)\n\t... 33 more\n\n<html>\n<head>\n    <meta charset=\"UTF-8\"/>\n    <title>004 - 命令执行后门（无回显，无拼接）</title>\n</head>\n<body>\n<h1>004 - 命令执行后门（无回显，无拼接）</h1>\n\n<pre></pre>\n<p>Linux 触发: </p>\n<p>curl '<a href=\"http://192.168.198.137:8080/vulns/004-command-1.jsp?cmd=cp+/etc/passwd+/tmp/\"\n            target=\"_blank\">http://192.168.198.137:8080/vulns/004-command-1.jsp?cmd=cp+/etc/passwd+/tmp/\n</a>'</p>\n<p>然后检查 /tmp 是否存在 passwd 这个文件</p>\n<br>\n\n<p>Windows 触发: </p>\n<p>curl '<a href=\"http://192.168.198.137:8080/vulns/004-command-1.jsp?cmd=cmd+/c+calc\"\n            target=\"_blank\">http://192.168.198.137:8080/vulns/004-command-1.jsp?cmd=cmd+/c+calc\n</a>'</p>\n<p>点击这里执行 calc.exe</p>\n</body>\n</html>\n",
+  "client_ip": "",
+  "event_level": "critical",
+  "event_time": "2023-12-20T15:26:20+0000",
+  "event_type": "attack",
+  "header": {
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "accept-encoding": "gzip, deflate",
+    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6",
+    "connection": "keep-alive",
+    "cookie": "JSESSIONID=351831C134C4A8B8A1CF0C31B62A463C",
+    "host": "192.168.198.137:8080",
+    "referer": "http://192.168.198.137:8080/vulns/004-command-1.jsp",
+    "scan-request-id": "0-8ced6b47-bc77-4190-95de-47cbbc2cb1f5",
+    "upgrade-insecure-requests": "1",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0",
+    "x-iast-filter": "W3sidHlwZSI6ICJjb21tYW5kIiwgImZpbHRlciI6IHsiY21kIjogIidcIm9wZW5yYXNwJyBjbWQifX1d"
+  },
+  "id": "83a4273166a3bdb1df0a045f719b6f90",
+  "intercept_state": "log",
+  "path": "/vulns/004-command-1.jsp",
+  "plugin_algorithm": "基础命令注入漏洞检测插件",
+  "plugin_confidence": 90,
+  "plugin_message": "OpenRASP-IAST漏洞扫描 - 执行的命令能够被用户输入改变逻辑",
+  "plugin_name": "command_basic",
+  "rasp_id": "IAST",
+  "rasp_version": "Unknown",
+  "request_id": "51c74351692d4493b68c153c4c7dd25b",
+  "request_method": "get",
+  "server_hostname": "sec",
+  "server_ip": "192.168.198.138",
+  "server_nic": [
+    {
+      "ip": "192.168.198.137",
+      "name": "ens33"
+    }
+  ],
+  "server_type": "tomcat",
+  "server_version": "9.0.84.0",
+  "stack_md5": "f4bc5a65e31d01cf560bc169b1e6ea96",
+  "stack_trace": "java.lang.ProcessImpl.<init>\njava.lang.ProcessImpl.start\njava.lang.ProcessBuilder.start\njava.lang.ProcessBuilder.start\njava.lang.Runtime.exec\njava.lang.Runtime.exec\njava.lang.Runtime.exec\norg.apache.jsp._004_002dcommand_002d1_jsp._jspService\norg.apache.jasper.runtime.HttpJspBase.service\njavax.servlet.http.HttpServlet.service\norg.apache.jasper.servlet.JspServletWrapper.service\norg.apache.jasper.servlet.JspServlet.serviceJspFile\norg.apache.jasper.servlet.JspServlet.service\njavax.servlet.http.HttpServlet.service\norg.apache.catalina.core.ApplicationFilterChain.internalDoFilter\norg.apache.catalina.core.ApplicationFilterChain.doFilter\norg.apache.tomcat.websocket.server.WsFilter.doFilter\norg.apache.catalina.core.ApplicationFilterChain.internalDoFilter\norg.apache.catalina.core.ApplicationFilterChain.doFilter\norg.apache.catalina.core.StandardWrapperValve.invoke\norg.apache.catalina.core.StandardContextValve.invoke\norg.apache.catalina.authenticator.AuthenticatorBase.invoke\norg.apache.catalina.core.StandardHostValve.invoke\norg.apache.catalina.valves.ErrorReportValve.invoke\norg.apache.catalina.valves.AbstractAccessLogValve.invoke\norg.apache.catalina.core.StandardEngineValve.invoke\norg.apache.catalina.connector.CoyoteAdapter.service\norg.apache.coyote.http11.Http11Processor.service\norg.apache.coyote.AbstractProcessorLight.process\norg.apache.coyote.AbstractProtocol$ConnectionHandler.process\norg.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun\norg.apache.tomcat.util.net.SocketProcessorBase.run\norg.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker\norg.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run\norg.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run\njava.lang.Thread.run",
+  "target": "192.168.198.137",
+  "upsert_id": "83a4273166a3bdb1df0a045f719b6f90",
+  "url": "http://192.168.198.137:8080/vulns/004-command-1.jsp"
+}
