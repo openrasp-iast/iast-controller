@@ -49,41 +49,6 @@ python manage.py createsuperuser
 可视化图表支持。支持漏洞报告导出，以及更加全面的报表展示。
 ```
 
-### Creating a Test Case
-
-1. Go to the "Test Cases" page.
-2. Click the "Create Test Case" button.
-3. Enter the test case name and description.
-4. Click the "Create" button.
-
-### Creating a Test Suite
-
-1. Go to the "Test Suites" page.
-2. Click the "Create Test Suite" button.
-3. Enter the test suite name and description.
-4. Click the "Create" button.
-
-### Creating a Test Environment
-
-1. Go to the "Test Environments" page.
-2. Click the "Create Test Environment" button.
-3. Enter the test environment name and description.
-4. Click the "Create" button.
-
-### Creating a Test Result
-
-1. Go to the "Test Results" page.
-2. Click the "Create Test Result" button.
-3. Enter the test result name and description.
-4. Click the "Create" button.
-
-### Generating a Report
-
-1. Go to the "Reports" page.
-2. Click the "Generate Report" button.
-3. Select the test suite and test environment.
-4. Click the "Generate" button.
-
 ## License
 
 IAST-CONTROLLER is released under the [Apache 2.0 license](LICENSE).

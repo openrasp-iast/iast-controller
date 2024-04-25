@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
+import structlog
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,8 +26,9 @@ SECRET_KEY = "django-insecure-_+*9)-#gvmu!&829_7mb0j8*6w^r8s71(es!-9tkbb%6^-e47f
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "192.168.31.30",
+    "localhost",
     "127.0.0.1",
+    "192.168.31.30",
     "192.168.31.66",
     "192.168.1.6",
     "192.168.106.26",
@@ -168,8 +170,6 @@ CORS_ALLOW_HEADERS = (
 )
 
 
-import structlog
-
 timestamper = structlog.processors.TimeStamper(fmt="%Y-%m-%d %H:%M:%S")
 pre_chain = [
     structlog.contextvars.merge_contextvars,
@@ -284,8 +284,6 @@ CORS_ALLOW_HEADERS = (
     "Pragma",
 )
 
-
-import structlog
 
 timestamper = structlog.processors.TimeStamper(fmt="%Y-%m-%d %H:%M:%S")
 pre_chain = [
